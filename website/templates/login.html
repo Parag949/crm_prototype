@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}<b>{{ title }}</b>{% endblock %}
+{% block content %}
+<form method="POST">
+    <h3 align="center">Sign In</h3>
+    <!-- Email input field: 'name="email"' will be used to send the email address in the form data -->
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="enter email" required />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="enter password" required />
+    </div>
+
+    <br/>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+</form>
+{% endblock %}
