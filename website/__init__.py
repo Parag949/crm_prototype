@@ -19,7 +19,7 @@ def create_app():
     from .auth import auth #import auth blueprint
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')    
-    from .models import User, Note  #we are importing models here to ensure they are registered with SQLAlchemy so that models.py files run before we create the database
+    from .models import User, Note, Customer  #we are importing models here to ensure they are registered with SQLAlchemy so that models.py files run before we create the database
     #so all the classes in models.py will be registered with SQLAlchemy, here user and note
 
     create_database(app)
