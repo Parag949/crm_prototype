@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>All Customers</h1>
+<ul class="list-group">
+{% for customer in user.customers %}
+    <li class="list-group-item"><label >{{ customer.name }}</label> <label >{{ customer.mobile }}</label>
+    <span aria-hidden="true">&times;</span>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
